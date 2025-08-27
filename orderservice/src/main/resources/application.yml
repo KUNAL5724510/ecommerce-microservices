@@ -1,0 +1,12 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: orderservice
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
