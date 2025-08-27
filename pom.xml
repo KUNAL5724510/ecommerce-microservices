@@ -36,15 +36,15 @@
 
     <!-- Modules -->
     <modules>
-        <module>user-service</module>
-        <module>product-service</module>
-        <module>order-service</module>
-        <module>inventory-service</module>
-        <module>payment-service</module>
-        <module>notification-service</module>
-        <module>config-server</module>
-        <module>discovery-service</module>
-        <module>api-gateway</module>
+        <module>userservice</module>
+        <module>productservice</module>
+        <module>orderservice</module>
+        <module>inventoryservice</module>
+        <module>paymentservice</module>
+        <module>notificationservice</module>
+        <module>configserver</module>
+        <module>discoveryservice</module>
+        <module>apigateway</module>
     </modules>
 
     <!-- Build plugins -->
