@@ -1,12 +1,5 @@
-server:
-  port: 8082
-
 spring:
   application:
-    name: productservice
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+    name: productservice  # must match filename in config repo
+  config:
+    import: optional:configserver:http://localhost:8888

@@ -1,12 +1,22 @@
 server:
-  port: 8088
+  port: 8888
 
-spring:
-  application:
-    name: configserver
+
+spring: 
+   application:
+      name: configserver
+
+
+cloud:
+   config:
+      server:
+         git:
+           url: https://github.com/KUNAL5724510/ecommerce-config-repo.git
+           clone-on-start: true
+
 
 management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+   endpoints:
+      web:
+        exposure:
+           include: health,info

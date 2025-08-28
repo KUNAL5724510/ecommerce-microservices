@@ -1,12 +1,5 @@
-server:
-  port: 8086
-
 spring:
   application:
-    name: inventoryservice
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+    name: inventoryservice  # must match filename in config repo
+  config:
+    import: optional:configserver:http://localhost:8888

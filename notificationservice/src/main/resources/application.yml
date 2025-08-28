@@ -1,12 +1,5 @@
-server:
-  port: 8085
-
 spring:
   application:
-    name: notificationservice
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+    name: notificationservice  # must match filename in config repo
+  config:
+    import: optional:configserver:http://localhost:8888

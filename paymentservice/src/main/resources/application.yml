@@ -1,12 +1,5 @@
-server:
-  port: 8083
-
 spring:
   application:
-    name: paymentservice
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+    name: paymentservice  # must match filename in config repo
+  config:
+    import: optional:configserver:http://localhost:8888

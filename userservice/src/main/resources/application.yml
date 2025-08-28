@@ -1,12 +1,5 @@
-server:
-  port: 8081
-
 spring:
   application:
-    name: userservice
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+    name: userservice  # must match filename in config repo
+  config:
+    import: optional:configserver:http://localhost:8888
