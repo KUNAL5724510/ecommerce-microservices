@@ -1,5 +1,11 @@
 spring:
   application:
-    name: userservice  # must match filename in config repo
+    name: userservice
   config:
     import: optional:configserver:http://localhost:8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
