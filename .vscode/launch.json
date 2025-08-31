@@ -1,5 +1,13 @@
 {
     "configurations": [
+        
+        {
+            "type": "java",
+            "name": "CategoryserviceApplication",
+            "request": "launch",
+            "mainClass": "categoryservice.src.main.java.com.ecommerce.categoryservice.CategoryserviceApplication",
+            "projectName": "ecommerce-microservices_4e96228d"
+        },
         {
             "type": "java",
             "name": "UserServiceApplication",
