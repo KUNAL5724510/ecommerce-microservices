@@ -2,13 +2,21 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UserServiceApplication",
+            "request": "launch",
+            "mainClass": "com.ecommerce.userservice.UserServiceApplication",
+            "projectName": "userservice"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-UserserviceApplication<userservice>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.ecommerce.userservice.UserserviceApplication",
             "projectName": "userservice",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62604 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=userservice"
         },
         {
             "type": "java",
@@ -87,6 +95,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.ecommerce.productservice.ProductServiceApplication",
             "projectName": "productservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiGatewayApplication<api-gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecommerce.apigateway.ApiGatewayApplication",
+            "projectName": "api-gateway",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
