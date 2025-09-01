@@ -45,6 +45,7 @@
         <module>configserver</module>
         <module>discoveryservice</module>
         <module>apigateway</module>
+        <module>categoryservice</module>
     </modules>
 
     <!-- Build plugins -->
