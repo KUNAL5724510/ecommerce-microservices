@@ -23,6 +23,8 @@ public class Product {
     @Column(name="price")
     private Double price;
 
+
+
     public Long getId() {
         return Id;
     }
@@ -87,6 +89,21 @@ public class Product {
 
     @Column(name="status")
     private String status;
+    
+    @Column(name="reject_reason")
+    private String rejectReason;
 
+
+
+
+    public String getRejectReason() {
+        return rejectReason;
+    }
+
+    public void setRejectReason(String rejectReason) {
+        this.rejectReason = rejectReason;
+    }
+
+    
 
 }
