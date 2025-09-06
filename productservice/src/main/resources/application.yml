@@ -3,3 +3,10 @@ spring:
     name: productservice  # must match filename in config repo
   config:
     import: optional:configserver:http://localhost:8888
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
