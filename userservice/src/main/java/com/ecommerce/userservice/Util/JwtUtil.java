@@ -13,15 +13,19 @@ import java.util.Date;
 public class JwtUtil {
 
     // Generate a secure random 256-bit key
-    private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+    private String secret = "secretkey@ECOMMERCE"; // fixed secret
 
+
+      private long expiration = 900000;
+
+    // 1. Generate a JWT token for a user
     public String generateToken(String email, String role) {
         return Jwts.builder()
-                .setSubject(email)
-                .claim("role", role)
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) // 10 hours
-                .signWith(key)
+                .setSubject(email)                    // "sub" claim → user identifier
+                .claim("role", role)                  // custom claim → role
+                .setIssuedAt(new Date())              // issued at (iat)
+                .setExpiration(new Date(System.currentTimeMillis() + expiration)) // expiry (exp)
+                .signWith(SignatureAlgorithm.HS256, secret) // sign with secret key
                 .compact();
     }
 }
